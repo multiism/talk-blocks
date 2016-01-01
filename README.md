@@ -93,6 +93,8 @@ Also, it would be good to leave one or two channels for future use.
 * Add specifications of dimensions, fillets, typography, contact placement...
 
 * Create website(s)
+
+* Speech synthesis easter eggs
 -->
 
 

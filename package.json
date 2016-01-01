@@ -1,0 +1,44 @@
+{
+  "name": "word-blocks",
+  "description": "Prototyping a new toy",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/1j01/word-blocks.git"
+  },
+  "bugs": {
+    "url": "http://github.com/1j01/word-blocks/issues"
+  },
+  "keywords": [
+    "word",
+    "sentence",
+    "blocks",
+    "block",
+    "wood",
+    "wooden",
+    "physical",
+    "toy",
+    "toys",
+    "electronic",
+    "fun",
+    "play",
+    "educational",
+    "education",
+    "funducational",
+    "funducation",
+    "prototype",
+    "circuits",
+    "gamification",
+    "grammar",
+    "kids",
+    "#fun4kidzLOL!"
+  ],
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register src/test.coffee"
+  },
+  "private": true,
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.3.4"
+  }
+}
