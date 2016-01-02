@@ -6,7 +6,7 @@ You'd have a cool toy, that's what.
 
 Don't forget to punctuate your sentences!
 The block at the end is the brain,
-and the dot is the button you press to speek the sentence.
+and the dot is the button you press to speak the sentence.
 
 With a base as simple as a block, [artistic possibilities are endless](BLOCK-IDEAS.md).
 Blocks can be painted or made from various materials.
@@ -36,7 +36,7 @@ the brain block sends a signal to the adjacent connected word block.
 The triggered block sends back a word ID to the brain
 before triggering the next block.
 The brain block receives the words in reverse order,
-and waits until it stops receiving words to speek.
+and waits until it stops receiving words to speak.
 
 
 ### The Circuit
