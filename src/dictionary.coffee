@@ -1,6 +1,4 @@
 
-
-module.exports =
 dictionary = [
 	# A comprehensive list of all the words and symbols that you will ever be able to use.
 	# Just kidding, this ain't the way to go.
@@ -37,5 +35,5 @@ dictionary = [
 	"vehicles"
 ]
 
-module.exports.fromID = (id)-> dictionary[id]
-module.exports.getID = (word)-> dictionary.indexOf(word)
+exports.fromID = (id)-> dictionary[id]
+exports.getID = (word)-> dictionary.indexOf(word)
