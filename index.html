@@ -1,26 +1,31 @@
 <!doctype html>
 <title>Word Blocks</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <body>
 	<style>
 		html, body {
 			padding: 0;
 			margin: 0;
-			font-family: sans-serif;
+			font-family: 'Roboto', sans-serif;
 		}
 		body > header,
 		body > main {
 			text-align: center;
 		}
 		body > header {
-			padding: 1em;
-			background: black;
+			background: #F44336;
 			color: white;
 		}
 		body > header h1 {
-			font-size: 2.6em;
+			font-size: 3.4em;
+			word-spacing: -0.2em;
+			margin: 0;
+			margin-top: 3rem;
+			margin-bottom: 0.6em;
 		}
 		body > header h2 {
-			font-size: 1.5em;
+			font-size: 2.3em;
+			margin: 1rem 0;
 		}
 		h1 > span {
 			border-radius: 0.1em;
@@ -31,12 +36,30 @@
 			/*color: rgba(0, 0, 0, 0.85);
 			text-shadow: 1px 4px 6px rgb(255, 213, 106), 0 0 0 black, 1px 4px 6px #FFD56A;*/
 			padding: 0.1em 0.2em;
+			padding-right: 0.1em;
 			font-weight: normal;
+			text-transform: lowercase;
 		}
+		.brain-block {
+			padding-left: 0;
+		}
+		.brain-block > img {
+			height: 0.9em;
+		}
+		/*
+		.brain-block > button {
+			background: none;
+			border: 0;
+			font-family: inherit;
+			font-size: 1em;
+		}
+		*/
 		centered {
 			display: inline-block;
 			width: 100%;
 			max-width: 70rem;
+			box-sizing: border-box;
+			padding: 1em;
 		}
 		main article {
 			text-align: start;
@@ -44,15 +67,15 @@
 	</style>
 	<header>
 		<centered>
-			<h1><span>Word</span> <span>Blocks</span></h1>
+			<h1><span>Word</span> <span>Blocks</span> <span class="brain-block">.<img src="speech-bubble.svg"></span></h1>
 			<h2>Sentence blocks that talk</h2>
 		</centered>
 	</header>
 	<script>
 		(function(){
-			var el = document.querySelector("body > header");
+			var el = document.querySelector("body > header > centered");
 			var update = function(){
-				el.style.fontSize = el.clientWidth / 35 + "px";
+				document.body.style.fontSize = el.clientWidth / 35 + "px";
 			};
 			update();
 			window.addEventListener("resize", update);
@@ -63,6 +86,7 @@
 			<article>
 				<h1>Get the starter set</h1>
 				<img width="400" height="400" src="https://placeimg.com/400/400/nature">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio sapien. Donec bibendum tincidunt erat. In eget ligula ut eros fermentum accumsan vel pulvinar sapien. Proin et interdum velit. Fusce et risus nibh. Pellentesque in sem vitae tellus interdum elementum. Sed maximus sodales erat in aliquam. Quisque sollicitudin ac tortor vitae dignissim. In vitae aliquet nunc. Etiam ex nibh, vehicula eu justo ut, posuere finibus nulla. Mauris ultrices est nisl, sit amet convallis lacus tristique quis. Duis eget tristique nisl, condimentum tincidunt augue. Morbi id arcu viverra nisi consequat accumsan. Nam vitae mauris eu sapien cursus viverra at vitae purus. Ut blandit imperdiet dui sit amet pulvinar.</p>
 			</article>
 		</centered>
 	</main>
