@@ -43,7 +43,9 @@ and waits until it stops receiving words to speak.
 
 ![A circuit of a few blocks chained together](circuit.png)
 
-To run this simulation, open [circuit.txt](./circuit.txt) in [circuitjs][].
+To run this simulation, open [circuit.txt](./circuit.txt) (Raw, select all, copy) in [circuitjs][] (File > Import from Text, paste, OK).
+Use <kbd>Alt</kbd>+Drag to pan around.
+You can click on the "button".
 
 In the current design, there is support for only a fixed number of possible words.
 If it were built as it is in the above diagram, it would support only 2⁴ = 16 words, but we would not use a multiplexer with so few inputs.
@@ -57,6 +59,16 @@ At any rate, the prototype will likely use word IDs.
 Also, it would be good to leave one or two channels for future use.
 (I can think of a few interesting uses.)
 
+The circle in the upper right of the diagram is where the data is read from.
+The whole right side area represents the brain block.
+It will use a [Raspberry Pi][] at least for the prototype.
+
+
+### The Code
+
+Located in [`src/`](src/) is the code for the brain along with some tests.
+It implements a fixed "database" of words, implemented [lamely][] as a simple array.
+
 
 ### Notes
 
@@ -64,17 +76,22 @@ Also, it would be good to leave one or two channels for future use.
 
 * The brain block can also query the chain of words without reading it aloud.
 
+* In the simulation, the clock is not controlled and the button is directly in the circuit, making it unreliable, but as implemented in the code, the real thing will send a trigger signal syncronized with the clock.
+
 <!--
 * There could be "'s" and "s" blocks that overlaps the preceding block (to counteract the word spacing), maybe even flipping over mechanically when connected via a button on the connecting side. I don't know how exactly it would appear when not flipped over onto a block, but maybe instead of flipping it could jump up and slide over. I'm thinking because blocks might not always be the same height. If they were, it could just stick out of the block fixedly. Wait, it could just be on an up/down slider, then it could settle on any block (as reasonably sized as any of the other ideas). It might be more likely to break (maybe), but it's simpler.
+  Or maybe we can just sacrifice equal left/right padding on the blocks.
+
+* We could have line/paragraph breaks that are basically just cords (with the magnets and contacts)
 
 * Add specifications of dimensions, fillets, typography, contact placement...
-
-* Create website(s)
 
 * Speech synthesis easter eggs
 -->
 
 
+[lamely]: http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork
+[Raspberry Pi]: https://www.raspberrypi.org/
 [circuitjs]: http://www.falstad.com/circuit/circuitjs.html
 [IPv4 exhaustion]: https://en.wikipedia.org/wiki/IPv4#Address_space_exhaustion
 [open patent]: https://en.wikipedia.org/wiki/Open_patent
