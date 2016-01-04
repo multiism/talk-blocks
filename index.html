@@ -1,0 +1,69 @@
+<!doctype html>
+<title>Word Blocks</title>
+<body>
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+		body > header,
+		body > main {
+			text-align: center;
+		}
+		body > header {
+			padding: 1em;
+			background: black;
+			color: white;
+		}
+		body > header h1 {
+			font-size: 2.6em;
+		}
+		body > header h2 {
+			font-size: 1.5em;
+		}
+		h1 > span {
+			border-radius: 0.1em;
+			background: #FFD56A;
+			box-shadow: 0 0.3em #FFB032;
+			color: #270F00;
+			text-shadow: #FFFFFF 0 0.01em 0.01em;
+			/*color: rgba(0, 0, 0, 0.85);
+			text-shadow: 1px 4px 6px rgb(255, 213, 106), 0 0 0 black, 1px 4px 6px #FFD56A;*/
+			padding: 0.1em 0.2em;
+			font-weight: normal;
+		}
+		centered {
+			display: inline-block;
+			width: 100%;
+			max-width: 70rem;
+		}
+		main article {
+			text-align: start;
+		}
+	</style>
+	<header>
+		<centered>
+			<h1><span>Word</span> <span>Blocks</span></h1>
+			<h2>Sentence blocks that talk</h2>
+		</centered>
+	</header>
+	<script>
+		(function(){
+			var el = document.querySelector("body > header");
+			var update = function(){
+				el.style.fontSize = el.clientWidth / 35 + "px";
+			};
+			update();
+			window.addEventListener("resize", update);
+		}());
+	</script>
+	<main>
+		<centered>
+			<article>
+				<h1>Get the starter set</h1>
+				<img width="400" height="400" src="https://placeimg.com/400/400/nature">
+			</article>
+		</centered>
+	</main>
+</body>
