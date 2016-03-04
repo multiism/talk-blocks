@@ -34,6 +34,9 @@
 * :bread: "bread" can be shaped like a loaf of bread
 * :small_red_triangle: "laser" can be clear plastic with a lit up central tube, or alternatively it could actually use a laser to carry the information. It would need a direct channel for power anyways, though, so it would be very silly.
 * "heavy" can be heavy, "light" may be able to be light
+* line/paragraph break connectors that could basically just be cords with the magnets and contacts (or maybe something nicer if possible)
+* splitting and joining connectors that let you give the sentences different possible paths at the same time (The brain could then read out load)
+* "'s" and "s" blocks, and other postfixes and prefixes like "-ness" and "super-" (I'm not sure exactly how these will work typographimechanically)
 
 [amber molding]: http://www.resinobsession.com/resin-tutorials/amber-resin-tutorial
 [fiber optics]:  http://www.instructables.com/id/Star-Map/

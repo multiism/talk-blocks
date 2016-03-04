@@ -72,19 +72,28 @@ It implements a fixed "database" of words, implemented [lamely][] as a simple ar
 
 ### Notes
 
-* If there is a failing connection, you can pinpoint it's location by what word the speech starts on.
+* If there is a failing connection, you can pinpoint its location by what word the speech starts on.
 
 * The brain block can also query the chain of words without reading it aloud.
 
 * In the simulation, the clock is not controlled and the button is directly in the circuit, making it unreliable, but as implemented in the code, the real thing will send a trigger signal syncronized with the clock.
 
 <!--
-* There could be "'s" and "s" blocks that overlaps the preceding block (to counteract the word spacing), maybe even flipping over mechanically when connected via a button on the connecting side. I don't know how exactly it would appear when not flipped over onto a block, but maybe instead of flipping it could jump up and slide over. I'm thinking because blocks might not always be the same height. If they were, it could just stick out of the block fixedly. Wait, it could just be on an up/down slider, then it could settle on any block (as reasonably sized as any of the other ideas). It might be more likely to break (maybe), but it's simpler.
+* There could be prefix/postfix blocks that overlap the preceding block (to counteract the word spacing), maybe even flipping over mechanically when connected via a button on the connecting side.
+  I don't know how exactly it would appear when not flipped over onto a block, but maybe instead of flipping it could jump up and slide over. I'm thinking because blocks might not always be the same height.
+  If they were, it could just stick out of the block fixedly.
+  Wait, it could just be on an up/down slider, then it could settle on any block (as reasonably sized as any of the other ideas). It might be more likely to break (maybe), but it's simpler.
+  Or maybe it can just be fixedly sticking out.
   Or maybe we can just sacrifice equal left/right padding on the blocks.
-
-* We could have line/paragraph breaks that are basically just cords (with the magnets and contacts)
+  But if we want to do both postfixes AND postfixes, I don't think that would work.
 
 * Add specifications of dimensions, fillets, typography, contact placement...
+
+* Maybe specify different levels of compliance with the standard,
+  i.e. level 1 being connecting to other blocks (primarily the height at which the connector should be, but also the details of the connector's contacts),
+  and on another level (there *can* be just 2) the block would have the dimensions to fit with prefix/postfix blocks
+  and joiners and splitters (which will have a fixed distance, although they could theoretically be adjustable, and the fixed should probably have some margin anyways so the limit to the dimension would actually be bigger than the recommended size of the blocks)
+  and other possible special blocks
 
 * Speech synthesis easter eggs
 -->
