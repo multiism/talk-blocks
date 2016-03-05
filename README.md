@@ -85,38 +85,25 @@ It implements a fixed "database" of words, implemented [in the simplest way poss
 
 * There can be speech synthesis easter eggs. :)
 
+* We definitely need to test to make sure the electrical connections are safe, first with a multimeter, then by touch (but I feel like it shouldn't be a problem)
+
 * We plan to file for an [open patent][].
 -->
 
 
 ## The Spec
 
-<!--
-This specification defines compliance levels for compatibility with other new and existing blocks, as well as guidelines to maintain consistency and safety.
-
-A block may follow some rules but not others.
-If it follows all the rules of Level 1, it can be said to be Level 1 Compliant.
-
-On second thought, this is way too formal.
--->
-
-<!-- The specification defines guidelines for compatibility and consistency with other blocks, as well as safety. -->
-
-<!--
-### Safety
-Blocks should not be dangerous.
-Avoid sharp corners and any other hazards.
--->
-
 The specification defines guidelines for compatibility and consistency with other blocks.
-
-<!-- Most guidelines besides the connections have a time and place to be ignored -->
-
-<!-- TODO: determine things -->
-<!-- TODO: include diagrams -->
 
 The actual specifications have not been determined yet.
 What follows should give you an idea of what will be included in the guidelines, but not much else.
+
+There will also be 3D diagrams to go along with the specs.
+<!-- Can they be interactive?
+Like maybe with https://help.github.com/articles/3d-file-viewer/
+I guess the spec just needs to be on a web page
+That's fine
+-->
 
 
 ### Connections
@@ -132,30 +119,26 @@ Blocks should also include two magnets, also placed at **X** from the bottom of 
 They should be of **TBD** size and strength.
 
 
+<!-- TODO: specify electronics related stuff in a section -->
+
+
 ### Dimensions
 
 The length of blocks are completely variable, based on the length of the word with padding on either side.
 The other dimensions of a standard block are **TBD**×**TBD**.
 
-**TODO:** specify fillet radius.
+If a block is too large, prefix/postfix blocks may not be able to rest ontop of it, and it may not work with joiners and splitters or other special blocks.
+Joiners and splitters may have some extra margins available, but it's still best to use the standard size if possible.
+
+Blocks should be [filletted][fillet] (rounded) with a radius of **TBD**.
 
 
 ### Typography
 
 **TBD** should be used as the default font, but other fonts and font variations can be used for various effects.
+Whatever font is used, the text can still be aligned properly.
 
 **TODO:** specify font size and margins and baselines and everything.
-
-<!--
-nope:
-* Specify a standard with different levels of compliance
-  describing contact placement, dimensions, fillets, typography, and electrical
-  i.e. level 1 being connecting to other blocks (primarily the height at which the connector should be, but also the details of the connector's contacts),
-  and on another level (there *can* be just 2) the block would have the dimensions to fit with prefix/postfix blocks
-  and joiners and splitters (which will have a fixed distance, although they could theoretically be adjustable, and the fixed should probably have some margin anyways so the limit to the dimension would actually be bigger than the recommended size of the blocks)
-  and other possible special blocks
-    * Make it clear whether you can have a state of compliance like "1 and 3 but not 2"
--->
 
 
 [in the simplest way possible]: http://c2.com/cgi/wiki?DoTheSimplestThingThatCouldPossiblyWork
@@ -163,3 +146,4 @@ nope:
 [circuitjs]: http://www.falstad.com/circuit/circuitjs.html
 [IPv4 exhaustion]: https://en.wikipedia.org/wiki/IPv4#Address_space_exhaustion
 [open patent]: https://en.wikipedia.org/wiki/Open_patent
+[fillet]: https://en.wikipedia.org/wiki/Fillet_(mechanics)
