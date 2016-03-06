@@ -8,16 +8,16 @@ Don't forget to punctuate your sentences!
 The block at the end is the brain,
 and the dot is the button you press to speak the sentence.
 
-With a base as simple as a block, [artistic possibilities are endless](BLOCK-IDEAS.md).
-Blocks can be painted or made from various materials.
-Typography can be adjusted.
-Electrical components such as LEDs can be powered with the existing power channel.
-Many blocks can be made self-descriptive.
-
 The blocks will be commercially available in sets,
 but further customization will be highly encouraged.
 
-We may offer some kind of custom block kit,
+With a base as simple as a block, [artistic possibilities are endless](BLOCK-IDEAS.md) for custom blocks.
+Blocks can be painted or made from various materials.
+Typography can be tweaked and tinkered with.
+Electrical components such as LEDs can be powered with the existing power channel.
+Many blocks can be made self-descriptive.
+
+We may offer some kind of custom block kit(s),
 however the technology will be open source,
 so you will always be able to buy the needed parts yourself if you want.
 
@@ -43,6 +43,10 @@ To run this simulation, open [circuit.txt](./circuit.txt) (Raw, select all, copy
 Use <kbd>Alt</kbd>+Drag to pan around.
 You can click on the button represented by a slanted white line to trigger the start of the sequence.
 
+The circle in the upper right of the diagram is where the data is read from.
+The whole right side area represents the brain block.
+It will use a [Raspberry Pi][] at least for the prototype.
+
 In the current design, there is support for only a fixed number of possible words.
 If it were built as it is in the above diagram, it would support only 2⁴ = 16 words, but we would not use a multiplexer with so few inputs.
 With an 8 bit multiplexer we could get 256 words,
@@ -54,10 +58,6 @@ At any rate, the prototype will likely use word IDs.
 
 Also, it would be good to leave one or two channels for future use.
 (I can think of a few interesting uses.)
-
-The circle in the upper right of the diagram is where the data is read from.
-The whole right side area represents the brain block.
-It will use a [Raspberry Pi][] at least for the prototype.
 
 
 ### The Code
@@ -75,13 +75,17 @@ It implements a fixed "database" of words, implemented [in the simplest way poss
 * In the simulation, the clock is not controlled and the button is directly in the circuit, making it unreliable, but as implemented in the code, the real thing will send a trigger signal syncronized with the clock.
 
 <!--
-* There could be prefix/postfix blocks that overlap the preceding block (to counteract the word spacing), maybe even flipping over mechanically when connected via a button on the connecting side.
-  I don't know how exactly it would appear when not flipped over onto a block, but maybe instead of flipping it could jump up and slide over. I'm thinking because blocks might not always be the same height.
-  If they were, it could just stick out of the block fixedly.
-  Wait, it could just be on an up/down slider, then it could settle on any block (as reasonably sized as any of the other ideas). It might be more likely to break (maybe), but it's simpler.
-  Or maybe it can just be fixedly sticking out.
-  Or maybe we can just sacrifice equal left/right padding on the blocks.
-  But if we want to do both postfixes AND postfixes, I don't think that would work.
+* How can prefix/postfix blocks overlap the preceding block to counteract word spacing (and maybe sometimes overlap a letter)?
+    * If we assume all blocks are the same height, it can simply fixedly stick out.
+    * We could sacrifice equal left/right padding on the blocks,
+      but if we want to do both postfixes and postfixes,
+      I don't think that would work
+    * It could flip over mechanically when connected via a button on the connecting side.
+      I don't know how exactly it would appear when not flipped over onto a block.
+    * Instead of flipping it could jump up and slide over.
+    * It could be on an up/down slider, then it could settle on any block (as reasonably sized as any of the other ideas).
+      It might be more likely to break (than if fixed),
+      but it's simpler than flipping or jump-sliding.
 
 * There can be speech synthesis easter eggs. :)
 
@@ -124,19 +128,22 @@ They should be of **TBD** size and strength.
 
 ### Dimensions
 
-The length of blocks are completely variable, based on the length of the word with padding on either side.
+The length of blocks are completely variable,
+based on the length of the word plus padding on either side.
 The other dimensions of a standard block are **TBD**×**TBD**.
 
 If a block is too large, prefix/postfix blocks may not be able to rest ontop of it, and it may not work with joiners and splitters or other special blocks.
 Joiners and splitters may have some extra margins available, but it's still best to use the standard size if possible.
 
-Blocks should be [filletted][fillet] (rounded) with a radius of **TBD**.
+The edges and corners should be [filletted][fillet] (rounded) with a radius of **TBD**.
 
 
 ### Typography
 
 **TBD** should be used as the default font, but other fonts and font variations can be used for various effects.
 Whatever font is used, the text can still be aligned properly.
+
+The text should be inset, in addition to being painted.
 
 **TODO:** specify font size and margins and baselines and everything.
 
