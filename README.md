@@ -1,4 +1,4 @@
-# Word Blocks
+# Talk Blocks
 
 What if you had blocks with words on them that you could fit together to make sentences, and then press a button to read the sentence out loud?
 
@@ -63,16 +63,19 @@ Also, it would be good to leave one or two channels for future use.
 ### The Code
 
 Located in [`src/`](src/) is the code for the brain along with some tests.
-It implements a fixed "database" of words, implemented [in the simplest way possible][], as an array.
+It uses a fixed "database" of words, implemented [in the simplest way possible][], as an array, and it simulates the data transfer bit by bit.
 
 
 ### Notes
 
+* Pressing the button a second time can stop speech playback. After all, it is a [full stop][] button.
+
 * If there is a failing connection, you can pinpoint its location by what word the speech starts on.
 
 * The brain block can also query the chain of words without reading it aloud.
+  This would be great for some kind of educational app(s).
 
-* In the simulation, the clock is not controlled and the button is directly in the circuit, making it unreliable, but as implemented in the code, the real thing will send a trigger signal syncronized with the clock.
+* In the circuit simulation, the clock is not controlled and the button is directly in the circuit, making it unreliable, but as implemented in the code, the real thing will send a trigger signal syncronized with the clock.
 
 <!--
 * How can prefix/postfix blocks overlap the preceding block to counteract word spacing (and maybe sometimes overlap a letter)?
@@ -89,9 +92,9 @@ It implements a fixed "database" of words, implemented [in the simplest way poss
 
 * There can be speech synthesis easter eggs. :)
 
-* We definitely need to test to make sure the electrical connections are safe, first with a multimeter, then by touch (but I feel like it shouldn't be a problem)
+* Need to make sure the electrical connections will be and are safe
 
-* We plan to file for an [open patent][].
+* I want to file for an [open patent][] if possible.
 -->
 
 
@@ -115,11 +118,11 @@ That's fine
 Blocks should have contacts and magnets so they can connect to other blocks.
 
 To facilitate the electronic connection, they need metal contact plates.
-The bottom of the contacts should be placed at **X=TBD** from the bottom of the block.
+The bottom of the contacts should be placed at **TBD** from the bottom of the block.
 For a standard size block, they should be centered horizontally and vertically.
 <!-- For a non-standard block, it should probably be based on the typographical center line if there is one -->
 
-Blocks should also include two magnets, also placed at **X** from the bottom of the block, inset into the block by **TBD**, to the left and right from the center of the block by **TBD**.
+Blocks should include a magnet at **TBD** from either end, inset by **TBD** into the bottom of the block.
 They should be of **TBD** size and strength.
 
 
@@ -154,3 +157,4 @@ The text should be inset, in addition to being painted.
 [IPv4 exhaustion]: https://en.wikipedia.org/wiki/IPv4#Address_space_exhaustion
 [open patent]: https://en.wikipedia.org/wiki/Open_patent
 [fillet]: https://en.wikipedia.org/wiki/Fillet_(mechanics)
+[full stop]: https://en.wikipedia.org/wiki/Full_stop
